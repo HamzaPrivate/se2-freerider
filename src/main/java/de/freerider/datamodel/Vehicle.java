@@ -38,10 +38,14 @@ public final class Vehicle {
      */
     private final String model;
 
-    /*
-     * ...more attributes
-     * 
-     */
+    private final int seats;
+    private final String category;
+
+    private final String power;
+
+    private Status status;
+
+
 
 
     /**
@@ -96,6 +100,10 @@ public final class Vehicle {
         this.id = id;
         this.make = make;
         this.model = model;
+        this.category = category;
+        this.power = power;
+        this.seats = seats;
+        setStatus(Status.valueOf(status));
     }
 
 
@@ -134,7 +142,9 @@ public final class Vehicle {
      * 
      * @return number of seats in Vehicle.
      */
-    // public int getSeats() { }
+     public int getSeats() {
+         return seats;
+     }
 
 
     /**
@@ -142,7 +152,9 @@ public final class Vehicle {
      * 
      * @return category of Vehicle.
      */
-    // public Category getCategory() { }
+     public Category getCategory() {
+         return Category.valueOf(category);
+     }
 
 
     /**
@@ -150,7 +162,9 @@ public final class Vehicle {
      * 
      * @return power source of Vehicle.
      */
-    // public Power getPower() { }
+     public Power getPower() {
+         return Power.valueOf(power);
+     }
 
 
     /**
@@ -158,7 +172,9 @@ public final class Vehicle {
      * 
      * @return status of Vehicle.
      */
-    // public Status getStatus() { }
+    public Status getStatus() {
+        return status;
+    }
 
 
     /**
@@ -168,6 +184,12 @@ public final class Vehicle {
      * @return chainable self-reference.
      * @throws IllegalArgumentException for illegal status parameter.
      */
-    // public Vehicle setStatus(Status status) { }
+    public Vehicle setStatus(Status status) {
+        if(status==null)
+            throw new IllegalArgumentException("status is null");
+        //
+        this.status = status;
+        return this;
+    }
 
 }

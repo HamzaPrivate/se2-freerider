@@ -42,7 +42,7 @@
 
     <!-- The properties section defines variables used in pom.xml. -->
     <properties>
-        <java.version>19</java.version>
+        <java.version>17</java.version>
         <skipTests>false</skipTests>    <!-- skip running tests -->
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -88,6 +88,11 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <scope>runtime</scope>
         </dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
 
     </dependencies>
 

@@ -167,6 +167,40 @@ class DataAccessImpl implements DataAccess {
         return result.size() > 0? result.get(0) : Optional.empty();
     }
 
+    // public long numberOfReservationsByCustomer(long id) {
+    //     //
+    //     List<Object> result = jdbcTemplate.query(
+    //         /*
+    //          * Prepare statement (ps) with "?"-augmented SQL query.
+    //          */
+    //         "SELECT * FROM CUSTOMER WHERE ID = ?",
+    //         ps -> {
+    //             /*
+    //              * Insert id value of first occurence of "?" in SQL.
+    //              */
+    //             ps.setInt(1, (int)id);
+    //         },
+
+    //         (rs, rowNum) -> {
+    //             /*
+    //              * Extract values from ResultSet.
+    //              */
+    //             String name = rs.getString("NAME");
+    //             String contact = rs.getString("CONTACT");
+    //             String status = rs.getString("STATUS");
+    //             /*
+    //              * Create Optional<Customer> from values.
+    //              */
+    //             return dataFactory.createCustomer(id, name, contact, status);
+    //         }
+    //     );
+    //     /*
+    //      * Probe List<Optional<Customer>> and return Optional<Customer> or
+    //      * empty Optional for empty list.
+    //      */
+    //     return result.size() > 0? result.get(0) : 0;
+    // }
+
 
     /**
      * Run query that returns all Customers with matching id in ids.

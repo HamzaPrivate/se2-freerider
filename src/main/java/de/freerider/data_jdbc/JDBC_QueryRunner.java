@@ -37,7 +37,7 @@ class JDBC_QueryRunner {
     /**
      * Vehicle DAO.
      */
-    // @Autowired requires implementation class of DataAccessVehicles interface
+     @Autowired
     private DataAccessVehicles vehicle_dao;
 
 
